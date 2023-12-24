@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulário | GN</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(185, 187, 116), rgb(213, 201, 66));
+        }
+        .box{
+            color: rgb(59, 60, 43);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(157, 113, 42, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 24%;
+        }
+        fieldset{
+            border: 3px solid rgb(174, 165, 123);
+        }
+        legend{
+            border: 1px solid rgb(84, 86, 51);
+            padding: 10px;
+            text-align: center;
+            background-color:rgb(173, 177, 54) ;
+            border-radius: 8px;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid rgb(98, 118, 31);
+            outline: none;
+            color: rgb(white);
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: rgb(99, 85, 3);
+        }
+        #data_nascimento{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+        }
+        #submit{
+            background-image: linear-gradient(to right,rgb(202, 156, 58), rgb(62, 29, 121));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #submit:hover{
+            background-image: linear-gradient(to right,rgb(92, 90, 10), rgb(63, 35, 114));
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <form action="https://api.sheetmonkey.io/form/uJiGbsf75KmDQEdpTR3RWr"method="post">
+            
+            <fieldset>
+                <legend><b>ordem de serviço</b></legend>
+                <br>
+
+                <div class="inputBox">
+                    <input type="text" name="Cliente" id="Cliente" class="inputUser" required>
+                    <label for="Cliente" class="labelInput">Cliente</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="text" name="Telefone" id= "Telefone" class="inputUser" required>
+                    <label for="Telefone" class="labelInput">Telefone</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="text" name="Endereço" id="Endereço" class="inputUser" required>
+                    <label for="Endereço" class="labelInput">Endereço</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="text" name="Descrição de Serviço" id="Descrição de Serviço" class="inputUser" required>
+                    <label for="Descrição de Serviço" class="labelInput">Descrição de Serviço</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="text" name="Valor do Serviço" id="Valor do Serviço" class="inputUser" required>
+                    <label for="Valor do Serviço" class="labelInput">Valor do Serviço</label>
+                </div>
+                <br><br>
+
+                <form>
+                    <label for="Forma de Pagamento">Forma de Pagamento</label>
+                    <select id="Forma de Pagamento" nome="status NF">
+                        <option value="Dinheiro">Dinheiro</option>
+                        <option value="Pix">Pix</option>
+                        <option value="Cartão">Cartão</option>
+            </select>
+                </form>
+                <br><br><br>
+
+                <form>
+                    <label for="Status de Pagamento">Status de Pagamento</label>
+                    <select id="Status de Pagamento" nome="status Pagamento">
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+            </select>
+                </form>
+               <br><br><br> 
+
+               <label for="Data_Serviço"><b>Data de Serviço</b></label>
+               <input type="Date" name="Data de Serviço" id="Data de Serviço" required>
+               <br><br><br>
+                
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html> 
